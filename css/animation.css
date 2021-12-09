@@ -1,0 +1,33 @@
+.success-prompt{
+	animation-name: show;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes show{
+	from{
+		background-color: rgba(0, 0, 0, 0.3);
+		display: none;
+	}
+	to{
+		background-color: rgba(0, 0, 0, 0.8);
+		display: flex;
+	}
+}
+
+.fall{
+	animation-name: fall;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fall{
+	from{
+		transform: translateY(0rem) rotateZ(0deg);
+		opacity: 0.9;
+	}
+	to{
+		transform: translateY(8rem) rotateZ(20deg);
+		opacity: 0;
+	}
+}
