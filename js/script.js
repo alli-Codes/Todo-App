@@ -1,5 +1,5 @@
 
-const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
 let totalTodo = document.querySelector("#totalTodo");
 let todoCompleted = document.querySelector("#todoCompleted");
