@@ -111,8 +111,11 @@ function editTodo(value) {
 	const todo_text = document.querySelectorAll(".todo_text");
 	const editTodoContainer = document.querySelectorAll('.edit-todo-container')
 	editTodoContainer[value].innerHTML = `
-									<input type="text" name="" id='edit-input${value}'>
-									<button id='edit-btn${value}'>Update</button>
+									<input type="text" name="" id='edit-input${value}' class='edit__input'>
+									<div class="edit__btn-container">
+										<button id='edit-btn${value}' class="edit__btn">Update</button>
+										<button id='cancel-btn${value}' class="cancel__btn">Cancel</button>
+									</div>
 		`;
 	const editInput = document.querySelector(`#edit-input${value}`)
 	editInput.value = todoArr[value].todo
@@ -120,6 +123,10 @@ function editTodo(value) {
 	const editBtn = document.querySelector(`#edit-btn${value}`).addEventListener('click', () => {
 		todoArr[value].todo = editInput.value
 		savesOnStorage()
+		displayTodos()
+	})
+
+	const cancelBtn = document.querySelector(`#cancel-btn${value}`).addEventListener('click', () => {
 		displayTodos()
 	})
 }
