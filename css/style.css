@@ -59,7 +59,6 @@
 		flex: 8;
 		display: flex;
 		justify-content: center;
-		/*align-items: center;*/
 		position: relative;
 		overflow-y: hidden;
 	}
@@ -87,12 +86,13 @@
 	}
 
 	.todo_components{
-		height: 3rem;
 		padding: 5px;
 		margin: 5px 10px;
 		display: flex;
+		align-content: center;
 		align-items: center;
 		align-self: stretch;
+		position: relative;
 	}
 
 	.todo_components i{
@@ -156,8 +156,6 @@
 		background-color: white;
 		height: 7rem;
 		width: 100%;
-		/*flex: 2;*/
-		/*display: flex;*/
 		position: fixed;
 		bottom: 0rem;
 	}
@@ -192,6 +190,7 @@
 		width: 40%;
 		display: flex;
 		flex-direction: column;
+		transition: background 4s ease;
 	}
 
 	.header{
@@ -229,16 +228,29 @@
 		flex-direction: row-reverse;
 	}
 
-	.footer button{
+	.footer button, .cancel__btn{
 		background-color: transparent;
 		border: none;
 		margin: 5px;
 	}
 
-	#saveBtn{
+	.cancel__btn{
+		background-color: rgba(0, 0, 0, 0.1);
+		padding: 5px 10px;
+		font-size: 10px;
+	}
+
+	.edit__input{
+		width: 70%;
+		margin: 10px 0;
+	}
+
+	#saveBtn, .edit__btn{
 		color: white;
 		background-color: #1BA4BF;
 		padding: 5px 10px;
+		border: none;
+		font-size: 10px;
 	}
 
 	#delete{
@@ -247,4 +259,9 @@
 
 	button{
 		cursor: pointer;
+	}
+
+	.edit-todo-container{
+		display: flex;
+		flex-direction: column;
 	}
