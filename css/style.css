@@ -232,12 +232,12 @@
 		background-color: transparent;
 		border: none;
 		margin: 5px;
+		font-size: 10px;
 	}
 
 	.cancel__btn{
 		background-color: rgba(0, 0, 0, 0.1);
 		padding: 5px 10px;
-		font-size: 10px;
 	}
 
 	.edit__input{
